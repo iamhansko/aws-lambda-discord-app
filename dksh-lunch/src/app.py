@@ -9,7 +9,7 @@ from commands import get_menu
 DISCORD_PUBLIC_KEY = os.getenv("DiscordPublicKey")
 DISCORD_BOT_ID = os.getenv("DiscordBotId") # https://docs.discloud.com/v/en/suport/faq/id-bot
 
-def lambda_handler(event):
+def lambda_handler(event, context):
     try:
         raw_body = event['body']
         auth_sig = event['headers'].get('x-signature-ed25519')

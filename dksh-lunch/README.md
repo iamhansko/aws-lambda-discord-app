@@ -12,11 +12,14 @@
 2. Applications -> [New Application](https://discord.com/developers/applications)
 3. Bot -> Privileged Gateway Intents Presence Intent, Server Members Intent, Message Content Intent Enabled
 4. Bot -> Add Bot -> Yes Do It -> Reset Token
-5. OAuth2 Url Generator -> applications.commands
-6. General Information > APPLICATION ID, PUBLIC KEY
+5. `pip install requests -t helpers && python helpers/register_commands.py`
+6. OAuth2 Url Generator -> applications.commands
+7. General Information > APPLICATION ID, PUBLIC KEY
 
 ## Deployment
 ```
+cd dksh-lunch
+
 # 1st Deployment
 sam build & sam deploy --guided --capabilities CAPABILITY_NAMED_IAM
 
